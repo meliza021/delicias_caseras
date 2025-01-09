@@ -22,23 +22,3 @@ def updateInventoryByCode(product_code):
             product.update({"cantidad_en_stock": stock})
             print(f"Se actualizó el {product_code} a {stock}")
     print(saveAll(data))
-import json
-
-def newproducts(codigo_producto, nombre, categoria, descripcion, proveedor, cantidad_en_stock, precio_venta, precio_proveedor):
-    products = findAll()
-    new_product = {
-        "codigo_producto": codigo_producto,
-        "nombre": nombre,
-        "categoria": categoria,
-        "descripcion": descripcion,
-        "proveedor": proveedor,
-        "cantidad_en_stock": cantidad_en_stock,
-        "precio_venta": precio_venta,
-        "precio_proveedor": precio_proveedor
-    }
-    products.append(new_product)
-    with open("data/products.json", "w") as file:
-        json.dump(products, file, indent=4)
-    print("Producto guardado correctamente.")
-
- 
