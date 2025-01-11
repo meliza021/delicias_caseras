@@ -4,7 +4,7 @@
         "nombre": "Pan Integral",
         "categoria": "Pan",
         "descripcion": "Pan de harina integral con semillas.",
-        "proveedor": "Panader\u00eda Natural",
+        "proveedor": "Panaderia Natural",
         "cantidad_en_stock": 50,
         "precio_venta": 3.5,
         "precio_proveedor": 2.0
@@ -14,7 +14,7 @@
         "nombre": "Pastel de Chocolate",
         "categoria": "Pastel",
         "descripcion": "Pastel de chocolate con cobertura cremosa.",
-        "proveedor": "Pasteler\u00eda Dulce Tentaci\u00f3n",
+        "proveedor": "PasteleriAa a lo rico",
         "cantidad_en_stock": 20,
         "precio_venta": 15.0,
         "precio_proveedor": 10.0
