@@ -4,14 +4,14 @@ from logic.products import findAll, saveAll as saveAllProducts
 from formula.products import *
 def findAllOrders(): #Encontrar todos los archivos en el JSON
         try:
-            with open("data/order.json", "r", encoding="utf-8") as file:
+            with open("data/orders.json", "r", encoding="utf-8") as file:
                 data = file.read() 
                 return json.loads(data) 
         except FileNotFoundError:
             return [] 
 
 def saveAll(data): #Editar los archivos en el JSON
-        with open("data/order.json", "w", encoding="utf-8") as file:
+        with open("data/orders.json", "w", encoding="utf-8") as file:
             str(data).encode('utf-8')
             convertJson = json.dumps(data, indent=4, ensure_ascii=False)
             file.write(convertJson)
@@ -59,10 +59,11 @@ def editOrder(order_code): #Funcion para poder editar la cantidad pedida en la o
     else: #Si no encuentra el codigo de la orden
         print(f"No se encontró ningún pedido con codigo_pedido {order_code}.")
         input("Presione enter para continuar: ")
+    print(saveAllProducts(data_products))
+    print(saveAll(data_orders))
 
 def deleteJSON(product_code): #Borrar un pedido realizado
     info = findAllOrders()
-    
     for code in info: 
         if product_code == code.get("codigo_pedido"): #Si el codigo es igual al codigo del pedido
             security = input("¿Está seguro de eliminar el pedido? (s/n): ")

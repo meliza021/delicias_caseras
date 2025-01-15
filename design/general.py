@@ -56,9 +56,9 @@ def menu(): #Menu principal
                 option = desingedit()
                 match option:
                     case 1:
-                        saveAll(editOrder(input("Ingrese el codigo del pedido: ")))
+                        editOrder(int(input("Ingrese el codigo del pedido: ")))
                     case 2:
-                        deleteJSON(input("Ingrese el codigo del pedido: "))
+                        deleteJSON(int(input("Ingrese el codigo del pedido: ")))
                     case 0:
                         return menu()
                     case _:
