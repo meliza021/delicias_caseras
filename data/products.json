@@ -25,7 +25,7 @@
         "categoria": "panes",
         "descripcion": "es un pan",
         "proveedor": "santiago",
-        "cantidad_en_stock": 1,
+        "cantidad_en_stock": 0,
         "precio_venta": 10.0,
         "precio_proveedor": 3.0
     }

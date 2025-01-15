@@ -1,9 +1,10 @@
-from design.products import *
+from design.products import  tableProducts, tableProductsByCategory, tableProductsByCode, tableProductsByName, newProduct, obtener_opcion
 from design.general import *
 from logic.products import updateInventoryByCode
 from design.customer import *
 from design.order import *
 from logic.order import *
+from  design.order import desingedit
 
 def menu(): #Menu principal
     print("""
@@ -45,27 +46,21 @@ def menu(): #Menu principal
                     case 6:
                         newProduct() 
                     case 0:
+
                         return menu()
                     case _:
                         input("El valor ingresado no existe, presione enter para continuar: ")
                         return menu()
         case "3":
             while True:
-                option = designOrder()
+                option = desingedit()
                 match option:
-                    case "1":
-                        editOrder((input("Ingrese el codigo del pedido: ")))
-                    case "2":
-                        deleteJSON((input("Ingrese el codigo del pedido: ")) )
-                    case "0":
+                    case 1:
+                        saveAll(editOrder(input("Ingrese el codigo del pedido: ")))
+                    case 2:
+                        deleteJSON(input("Ingrese el codigo del pedido: "))
+                    case 0:
                         return menu()
                     case _:
                         input("El valor ingresado no existe, presione enter para continuar: ")
                         return menu()
-        case "0":
-            print("Gracias por utilizar nuestro sistema")
-            return
-        case _:
-            print("Opción no válida")
-            input("Presione enter para continuar: ")
-            return menu()
